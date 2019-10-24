@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang=fr dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 4 javascript</title>
+    <script type="text/javascript">
+    function fAlert(){
+      var monNom = document.getElementById("nom").value;
+      var monPrenom = document.getElementById("prenom").value;
+      var maville = document.getElementById("ville").value;
+      if(monNom == ""){
+        alert("Veuillez saisir votre nom");
+        document.getElementById("nom").focus();
+      }
+      if(monNom !="" && monPrenom == ""){
+        alert("Veuillez saisir votre prénom");
+        document.getElementById("prenom").focus();
+      }
+      if(monPrenom != "" && maville == ""){
+        alert("Veuillez saisir votre ville");
+        document.getElementById("ville").focus();
+      }
+      if(monNom !="" && monPrenom !== "" && maville != "")
+      {
+        alert('Vous avez saisi :\n' + monNom + '\n' + monPrenom + '\n' + maville);
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <p>Refaire l’exercice 2 en demandant le nom, le prénom et la ville à l’utilisateur.
+    </p>
+    <form>
+      <p>
+        <label for="nom">Saisir votre nom</label>
+        <input type="text" id="nom" name="nom" value="" placeholder="saisir votre nom">
+        <br />
+        <label for="prenom">Saisir votre prénom</label>
+        <input type="text" id="prenom" name="prenom" value="" placeholder="saisir votre prénom">
+        <br />
+        <label for="mot1">Saisir votre ville</label>
+        <input type="text" id="ville" name="ville" value="" placeholder="saisir votre ville">
+        <input type="button" value="Cliquez ici" name="button" id="button" onclick="fAlert();">
+      </p>
+    </form>
+  </body>
+</html>
