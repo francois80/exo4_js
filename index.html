@@ -3,7 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Exercice 4 javascript</title>
-    <script type="text/javascript">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <p class="text-success h1 text-center">Refaire l’exercice 2 en demandant<br /> le nom, le prénom et la ville à l’utilisateur.</p>
+      <form>
+        <div class="form-group">
+          <label for="nom" class="text-white-50 bg-danger">Saisir votre nom</label>
+          <input type="text" class="form-control" id="nom" placeholder="Saisir votre nom">
+        </div>
+        <div class="form-group">
+          <label for="prenom" class="text-white-50 bg-danger">Saisir votre prénom</label>
+          <input type="text" class="form-control" id="prenom" placeholder="Saisir votre prénom">
+        </div>
+        <div class="form-group">
+          <label for="ville" class="text-white-50 bg-danger">Saisir votre ville</label>
+          <input type="text" class="form-control" id="ville" placeholder="Saisir votre ville">
+        </div>
+        <input type="button" id="submit" class="btn btn-primary btn-lg btn-block" value="Cliquez ici" name="button" id="button">
+      </form>
+    </div>
+    <script>
     function fAlert(){
       var monNom = document.getElementById("nom").value;
       var monPrenom = document.getElementById("prenom").value;
@@ -25,23 +47,10 @@
         alert('Vous avez saisi :\n' + monNom + '\n' + monPrenom + '\n' + maville);
       }
     }
+    document.getElementById('submit').addEventListener("click",fAlert);
     </script>
-  </head>
-  <body>
-    <p>Refaire l’exercice 2 en demandant le nom, le prénom et la ville à l’utilisateur.
-    </p>
-    <form>
-      <p>
-        <label for="nom">Saisir votre nom</label>
-        <input type="text" id="nom" name="nom" value="" placeholder="saisir votre nom">
-        <br />
-        <label for="prenom">Saisir votre prénom</label>
-        <input type="text" id="prenom" name="prenom" value="" placeholder="saisir votre prénom">
-        <br />
-        <label for="mot1">Saisir votre ville</label>
-        <input type="text" id="ville" name="ville" value="" placeholder="saisir votre ville">
-        <input type="button" value="Cliquez ici" name="button" id="button" onclick="fAlert();">
-      </p>
-    </form>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   </body>
-</html>
+  </html>
